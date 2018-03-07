@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Music App</string>
+
+    <string name="musicBtn">Yours songs</string>
+    <string name="musicStoreBtn">Buy music</string>
+    <string name="audiobookBtn">Yours audiobooks</string>
+    <string name="audiobookStoreBtn">Buy audiobook</string>
+</resources>

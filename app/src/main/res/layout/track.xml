@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:text="Ala ma kota"
+            />
+        <TextView
+            android:id="@+id/author_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:text="Zenek Martyniuk"
+            />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/duration_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        tools:text="3.54"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play"/>
+
+
+</LinearLayout>
