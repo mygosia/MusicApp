@@ -40,7 +40,8 @@ public class TrackAdapter extends ArrayAdapter<Track> {
         authorTextView.setText(currentTrack.getAuthor());
 
         TextView durationTextView = (TextView) listItemView.findViewById(R.id.duration_text_view);
-        durationTextView.setText(currentTrack.getDuration());
+        durationTextView.setText("" + currentTrack.getDuration());
+
 
         return listItemView;
 

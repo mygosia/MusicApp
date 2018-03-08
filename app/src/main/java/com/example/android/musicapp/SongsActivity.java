@@ -1,9 +1,13 @@
 package com.example.android.musicapp;
 
-
-
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View.OnClickListener;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -35,5 +39,23 @@ public class SongsActivity extends AppCompatActivity {
         ListView listView = (ListView) findViewById(R.id.trackList);
 
         listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener()
+        {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Button button = findViewById(R.id.playTrackBtn);
+
+                button.setOnClickListener(new OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent audiobooksIntent = new Intent(SongsActivity.this, nowPlaying.class);
+                        startActivity(audiobooksIntent);
+                    }
+                });
+            }
+
+        });
+
     }
 }

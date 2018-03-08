@@ -19,10 +19,7 @@ public class MainActivity extends AppCompatActivity {
         songs.setOnClickListener(new OnClickListener() {
             // The code in this method will be executed when the numbers category is clicked on.
             public void onClick(View view) {
-                // Create a new intent to open the {@link NumbersActivity}
                 Intent songsIntent = new Intent(MainActivity.this, SongsActivity.class);
-
-                // Start the new activity
                 startActivity(songsIntent);
             }
         });
