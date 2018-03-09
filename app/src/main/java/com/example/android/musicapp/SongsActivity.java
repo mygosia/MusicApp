@@ -1,13 +1,11 @@
 package com.example.android.musicapp;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View.OnClickListener;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -17,7 +15,9 @@ public class SongsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_songs);
+        setContentView(R.layout.activity_tracks_list);
+
+        //Creating array list of songs tracks
 
         ArrayList<Track> musicList = new ArrayList<Track>();
 
@@ -35,24 +35,19 @@ public class SongsActivity extends AppCompatActivity {
         musicList.add(new Track("Fragile", "Sting", 4.07));
         musicList.add(new Track("The Best", "Tina Turner", 3.40));
 
+        //Setting ArrayList Adapter to ListView
         TrackAdapter adapter = new TrackAdapter(this, musicList);
         ListView listView = (ListView) findViewById(R.id.trackList);
 
         listView.setAdapter(adapter);
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener()
-        {
+        //Setting onClickListener od listView od songs and Intent to nowPlaying Activity.
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Button button = findViewById(R.id.playTrackBtn);
-
-                button.setOnClickListener(new OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Intent audiobooksIntent = new Intent(SongsActivity.this, nowPlaying.class);
-                        startActivity(audiobooksIntent);
-                    }
-                });
+                Log.w("SongsActivity", "putting control");
+                Intent songsIntent = new Intent(SongsActivity.this, nowPlaying.class);
+                startActivity(songsIntent);
             }
 
         });

@@ -14,6 +14,7 @@ import java.util.ArrayList;
 /**
  * Created by mygosia on 07.03.18.
  */
+//Creating Adapter to putting tracks to Array List.
 
 public class TrackAdapter extends ArrayAdapter<Track> {
 
@@ -21,15 +22,13 @@ public class TrackAdapter extends ArrayAdapter<Track> {
         super(context, 0, musicList);
     }
 
-
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-//
 
         Track currentTrack = getItem(position);
 
         View listItemView = convertView;
-        if(listItemView == null) {
+        if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
                     R.layout.track, parent, false);
         }
@@ -41,7 +40,6 @@ public class TrackAdapter extends ArrayAdapter<Track> {
 
         TextView durationTextView = (TextView) listItemView.findViewById(R.id.duration_text_view);
         durationTextView.setText("" + currentTrack.getDuration());
-
 
         return listItemView;
 

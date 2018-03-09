@@ -20,8 +20,8 @@
         <Button
             android:id="@+id/buyMusicBtn"
             style="@style/ButtonStyle"
-            android:background="@color/btn2"
-            android:text="@string/musicStoreBtn" />
+            android:text="@string/musicStoreBtn"
+            android:background="@color/btn2" />
     </LinearLayout>
 
     <LinearLayout
@@ -33,13 +33,13 @@
         <Button
             android:id="@+id/audiobookBtn"
             style="@style/ButtonStyle"
-            android:background="@color/btn3"
-            android:text="@string/audiobookBtn" />
+            android:text="@string/audiobookBtn"
+            android:background="@color/btn3" />
 
         <Button
             android:id="@+id/buyAudiobookBtn"
             style="@style/ButtonStyle"
-            android:background="@color/btn4"
-            android:text="@string/audiobookStoreBtn" />
+            android:text="@string/audiobookStoreBtn"
+            android:background="@color/btn4" />
     </LinearLayout>
 </LinearLayout>

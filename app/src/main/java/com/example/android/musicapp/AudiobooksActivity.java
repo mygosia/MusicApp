@@ -1,7 +1,11 @@
 package com.example.android.musicapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -11,10 +15,10 @@ public class AudiobooksActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_audiobooks);
+        setContentView(R.layout.activity_tracks_list);
 
+        //Creating array list of audiobooks tracks
         ArrayList<Track> musicList = new ArrayList<Track>();
-
         musicList.add(new Track("Ulisess", "Zenek Martyniuk", 5.35));
         musicList.add(new Track("Odyssei", "Bolndie", 3.59));
         musicList.add(new Track("Murder in Orient Express", "Pink Floyd", 10.45));
@@ -29,9 +33,21 @@ public class AudiobooksActivity extends AppCompatActivity {
         musicList.add(new Track("Fragile", "Sting", 4.07));
         musicList.add(new Track("The Best", "Tina Turner", 3.40));
 
+        //Setting ArrayList Adapter to ListView
         TrackAdapter adapter = new TrackAdapter(this, musicList);
         ListView listView = (ListView) findViewById(R.id.trackList);
 
         listView.setAdapter(adapter);
+
+        //Setting onClickListener od listView of audiobooks and Intent to nowPlaying Activity.
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Log.w("SongsActivity", "putting control");
+                Intent songsIntent = new Intent(AudiobooksActivity.this, nowPlaying.class);
+                startActivity(songsIntent);
+            }
+
+        });
     }
 }

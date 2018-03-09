@@ -18,14 +18,13 @@
         </activity>
         <activity
             android:name=".SongsActivity"
-            android:label="Songs" />
+            android:label="Songs - click on track to play" />
         <activity
             android:name=".AudiobooksActivity"
-            android:label="Audiobooks" />
+            android:label="Audiobooks - click on track to play" />
         <activity
             android:name=".nowPlaying"
-            android:label="Now Playing">
-        </activity>
+            android:label="Now Playing"></activity>
     </application>
 
 </manifest>

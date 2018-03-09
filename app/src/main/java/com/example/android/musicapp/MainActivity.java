@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Find button that shows list of songs, set onClickListener on it and set Intent  to new Activity
         Button songs = findViewById(R.id.songsBtn);
         songs.setOnClickListener(new OnClickListener() {
             // The code in this method will be executed when the numbers category is clicked on.
@@ -23,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(songsIntent);
             }
         });
+
+        //Find button that goes to music store, set onClickListener on it and set Intent  to new Store website
         Button buyMusic = findViewById(R.id.buyMusicBtn);
         buyMusic.setOnClickListener(new OnClickListener() {
             @Override
@@ -33,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        //Find button that shows list of audiobooks, set onClickListener on it and set Intent  to new Activity
         Button audiobooks = findViewById(R.id.audiobookBtn);
         audiobooks.setOnClickListener(new OnClickListener() {
             @Override
@@ -41,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(audiobooksIntent);
             }
         });
+
+        //Find button that goes to audiobook store, set onClickListener on it and set Intent  to new Store website
         Button buyAudiobooks = findViewById(R.id.buyAudiobookBtn);
         buyAudiobooks.setOnClickListener(new OnClickListener() {
             @Override
