@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -50,6 +51,14 @@ public class SongsActivity extends AppCompatActivity {
                 startActivity(songsIntent);
             }
 
+        });
+        //Setting onClickListener on Back button  and Intent to start Activity.
+        Button backButton = findViewById(R.id.back_btn);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent backIntent = new Intent(SongsActivity.this, MainActivity.class);
+                startActivity(backIntent);
+            }
         });
 
     }

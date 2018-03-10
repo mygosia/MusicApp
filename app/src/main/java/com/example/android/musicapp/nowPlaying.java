@@ -1,6 +1,8 @@
 package com.example.android.musicapp;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -37,6 +39,25 @@ public class nowPlaying extends AppCompatActivity {
         forwardButton.setOnClickListener(new OnClickListener() {
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(), "Forwarding", Toast.LENGTH_SHORT).show();
+            }
+        });
+        //Setting onClickListener on Back button  and Intent to start Activity.
+        Button toLibraryButton = findViewById(R.id.to_library_btn);
+        toLibraryButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent toLibraryIntent = new Intent(nowPlaying.this, AudiobooksActivity.class);
+                startActivity(toLibraryIntent);
+            }
+        });
+        //Setting onClickListener on Back button  and Intent to start Activity.
+        Button toShopButton = findViewById(R.id.to_shop_btn);
+        toShopButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String url = "http://www.amazon.com";
+                Intent buyMusicIntent = new Intent(Intent.ACTION_VIEW);
+                buyMusicIntent.setData(Uri.parse(url));
+                startActivity(buyMusicIntent);
             }
         });
     }

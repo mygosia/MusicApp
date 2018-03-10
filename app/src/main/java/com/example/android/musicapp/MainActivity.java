@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
         //Find button that shows list of songs, set onClickListener on it and set Intent  to new Activity
         Button songs = findViewById(R.id.songsBtn);
         songs.setOnClickListener(new OnClickListener() {
-            // The code in this method will be executed when the numbers category is clicked on.
             public void onClick(View view) {
                 Intent songsIntent = new Intent(MainActivity.this, SongsActivity.class);
                 startActivity(songsIntent);
@@ -31,9 +30,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String url = "http://www.amazon.com";
-                Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setData(Uri.parse(url));
-                startActivity(i);
+                Intent buyMusicIntent = new Intent(Intent.ACTION_VIEW);
+                buyMusicIntent.setData(Uri.parse(url));
+                startActivity(buyMusicIntent);
             }
         });
 
@@ -53,9 +52,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String url = "http://www.amazon.com";
-                Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setData(Uri.parse(url));
-                startActivity(i);
+                Intent buyAudiobookIntent = new Intent(Intent.ACTION_VIEW);
+                buyAudiobookIntent.setData(Uri.parse(url));
+                startActivity(buyAudiobookIntent);
             }
         });
     }

@@ -32,13 +32,13 @@ public class TrackAdapter extends ArrayAdapter<Track> {
             listItemView = LayoutInflater.from(getContext()).inflate(
                     R.layout.track, parent, false);
         }
-        TextView titleTextView = (TextView) listItemView.findViewById(R.id.title_text_view);
+        TextView titleTextView =  listItemView.findViewById(R.id.title_text_view);
         titleTextView.setText(currentTrack.getTitle());
 
-        TextView authorTextView = (TextView) listItemView.findViewById(R.id.author_text_view);
+        TextView authorTextView =  listItemView.findViewById(R.id.author_text_view);
         authorTextView.setText(currentTrack.getAuthor());
 
-        TextView durationTextView = (TextView) listItemView.findViewById(R.id.duration_text_view);
+        TextView durationTextView =  listItemView.findViewById(R.id.duration_text_view);
         durationTextView.setText("" + currentTrack.getDuration());
 
         return listItemView;

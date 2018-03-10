@@ -9,6 +9,7 @@
         android:layout_height="0dp"
         android:layout_weight="2"
         android:background="@drawable/book_cover"
+        android:contentDescription="@string/coverDescription"
         android:scaleType="center" />
 
     <LinearLayout
@@ -17,6 +18,13 @@
         android:layout_weight="1"
         android:orientation="horizontal"
         android:gravity="center">
+        <Button
+            android:id="@+id/to_library_btn"
+            style="@style/StandButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/trackListBtn"
+            />
 
         <Button
             android:id="@+id/rewind_btn"
@@ -43,5 +51,12 @@
             android:id="@+id/forward_btn"
             style="@style/ButtonNavigationStyle"
             android:background="@drawable/forward_button" />
+        <Button
+            android:id="@+id/to_shop_btn"
+            style="@style/StandButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/musicStoreBtn"
+            />
     </LinearLayout>
 </LinearLayout>

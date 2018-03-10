@@ -5,4 +5,9 @@
     <string name="musicStoreBtn">Buy music</string>
     <string name="audiobookBtn">Yours audiobooks</string>
     <string name="audiobookStoreBtn">Buy audiobook</string>
+    <string name="backBtn">Back</string>
+    <string name="trackListBtn">Track List</string>
+
+    <string name="coverDescription">Track Cover Image</string>
+    <string name="playImgDescription">Play Button</string>
 </resources>

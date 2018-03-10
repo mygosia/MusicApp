@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -39,15 +40,24 @@ public class AudiobooksActivity extends AppCompatActivity {
 
         listView.setAdapter(adapter);
 
-        //Setting onClickListener od listView of audiobooks and Intent to nowPlaying Activity.
+        //Setting onClickListener of listView of audiobooks and Intent to nowPlaying Activity.
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Log.w("SongsActivity", "putting control");
                 Intent songsIntent = new Intent(AudiobooksActivity.this, nowPlaying.class);
                 startActivity(songsIntent);
             }
 
         });
+        //Setting onClickListener on Back button  and Intent to start Activity.
+        Button backButton = findViewById(R.id.back_btn);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent backIntent = new Intent(AudiobooksActivity.this, MainActivity.class);
+                startActivity(backIntent);
+            }
+        });
+
+
     }
 }

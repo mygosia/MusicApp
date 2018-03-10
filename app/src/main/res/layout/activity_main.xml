@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -13,13 +12,13 @@
 
         <Button
             android:id="@+id/songsBtn"
-            style="@style/ButtonStyle"
+            style="@style/TileButtonStyle"
             android:background="@color/btn1"
             android:text="@string/musicBtn" />
 
         <Button
             android:id="@+id/buyMusicBtn"
-            style="@style/ButtonStyle"
+            style="@style/TileButtonStyle"
             android:background="@color/btn2"
             android:text="@string/musicStoreBtn" />
     </LinearLayout>
@@ -32,13 +31,13 @@
 
         <Button
             android:id="@+id/audiobookBtn"
-            style="@style/ButtonStyle"
+            style="@style/TileButtonStyle"
             android:background="@color/btn3"
             android:text="@string/audiobookBtn" />
 
         <Button
             android:id="@+id/buyAudiobookBtn"
-            style="@style/ButtonStyle"
+            style="@style/TileButtonStyle"
             android:background="@color/btn4"
             android:text="@string/audiobookStoreBtn" />
     </LinearLayout>
