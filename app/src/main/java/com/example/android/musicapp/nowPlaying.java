@@ -49,7 +49,7 @@ public class nowPlaying extends AppCompatActivity {
                 startActivity(toLibraryIntent);
             }
         });
-        //Setting onClickListener on Back button  and Intent to start Activity.
+        //Setting onClickListener on Shop button  and Intent to start Activity.
         Button toShopButton = findViewById(R.id.to_shop_btn);
         toShopButton.setOnClickListener(new View.OnClickListener() {
             @Override

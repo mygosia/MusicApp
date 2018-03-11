@@ -18,10 +18,10 @@
         </activity>
         <activity
             android:name=".SongsActivity"
-            android:label="Songs - click on track to play" />
+            android:label="List of songs" />
         <activity
             android:name=".AudiobooksActivity"
-            android:label="Audiobooks - click on track to play" />
+            android:label="List of audiobooks" />
         <activity
             android:name=".nowPlaying"
             android:label="Now Playing"></activity>
